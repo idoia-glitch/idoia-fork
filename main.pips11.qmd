@@ -11,14 +11,13 @@ format:
 editor: visual
 ---
 
-#Suggestions from me for intro structure: 
+#Suggestions from me for intro structure:
 
 # Introduction
 
 This section introduces the project, its dataset, and the questions guiding the analyses. The content is currently a work in progress.
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Background
 
 Placeholder: Introduce the general topic of student life and explain why students' psychosocial characteristics, daily habits, and academic experiences are relevant to explore.
@@ -34,26 +33,19 @@ Placeholder: Explain the overall aim of the project and state the main research 
 ## Overview of the Report
 
 Placeholder: Briefly explain the order of the report: the student profile and study habits, followed by sleep and mental well-being, and then students' social life.
-
 :::
 
 # Data overview
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Age Distribution
 
 ## Gender Composition
 
 ## Overview of study habits
-
-
-:::
 :::
 
-
-
-
+\:::
 
 # Introduction
 
