@@ -11,6 +11,50 @@ format:
 editor: visual
 ---
 
+#Suggestions from me for intro structure: 
+
+# Introduction
+
+This section introduces the project, its dataset, and the questions guiding the analyses. The content is currently a work in progress.
+
+::: {.panel-tabset}
+
+## Background
+
+Placeholder: Introduce the general topic of student life and explain why students' psychosocial characteristics, daily habits, and academic experiences are relevant to explore.
+
+## Dataset
+
+Placeholder: Briefly introduce the dataset, where it comes from, the sample size, and the main variables included. Verify the details before finalising.
+
+## Aim and Research Questions
+
+Placeholder: Explain the overall aim of the project and state the main research questions. Make sure the questions match the analyses included in the report.
+
+## Overview of the Report
+
+Placeholder: Briefly explain the order of the report: the student profile and study habits, followed by sleep and mental well-being, and then students' social life.
+
+:::
+
+# Data overview
+
+::: {.panel-tabset}
+
+## Age Distribution
+
+## Gender Composition
+
+## Overview of study habits
+
+
+:::
+:::
+
+
+
+
+
 # Introduction
 
 Insert small explanation of what the data set is (add hypotheses here or before each analyses?)
@@ -25,12 +69,15 @@ Insert small explanation of what the data set is (add hypotheses here or before 
 ```
 
 ## Loading data
+
 ```{r}
 reports <- read.csv("https://zenodo.org/records/10573715/files/CSE_student_performances%20%281%29.csv")
 ```
 
 ## Libraries
+
 Has to be ran prior to running the code chunks.
+
 ```{r}
 library(tidyverse)
 library(plotly)
@@ -40,10 +87,11 @@ library(rstatix)
 ```
 
 ## Student Profile
+
 ::: panel-tabset
 ### Student Age, visible by Gender
-The following plot demonstrates the student ages within the sample.
-The dropdown menu can be utilized to show the age distribution according to Gender (Male/Female).
+
+The following plot demonstrates the student ages within the sample. The dropdown menu can be utilized to show the age distribution according to Gender (Male/Female).
 
 ```{r}
 age_data <- reports %>%
@@ -134,7 +182,9 @@ student_demo_plot
 ```
 
 ### Depression Status
+
 The following plot visualizes the Depression status (yes = depression present, sometimes = occasional depressive mood, no = no depression present) within the student sample.
+
 ```{r}
 depression_column <- "DepressionStatus"
 
@@ -174,6 +224,7 @@ plot_ly(
 ```
 
 ### Sleep Duration
+
 The following plot demonstrates the students' sleep duration (in hours).
 
 ```{r}
@@ -210,11 +261,13 @@ plot_ly(
 :::
 
 ## Study Habits
-:::panel-tabset
+
+::: panel-tabset
 ### Academic Performance in relation to Taking Notes in Class
+
 #### Table
-Academic performance can be sorted by "Below average", "Average", "Good", "Excellent", and
-Taking Notes is quantified in "Yes", "No", and "Maybe" answer
+
+Academic performance can be sorted by "Below average", "Average", "Good", "Excellent", and Taking Notes is quantified in "Yes", "No", and "Maybe" answer
 
 ```{r}
 reports %>%
@@ -232,6 +285,7 @@ reports %>%
 ```
 
 #### Dynamic Plot
+
 A visualization of the above Table. The animation can be started by pressing the "Play" button on the left. Alternatively, it is possible to look at all groups manually.
 
 ```{r}
@@ -436,6 +490,7 @@ challenge_plot
 ```
 
 ### Challenges in completing Academic tasks and performance
+
 The above demonstarted academic task challenges plotted in relation to academic performance.
 
 ```{r}
@@ -550,6 +605,7 @@ plot_ly(
 
 ```
 :::
+
 # Analysis 1 - Sleep and Mental Well being
 
 Sleep is an important part of student life and may be related to both academic performance and mental well-being. In this part of the analysis, we explore students' daily sleep duration and examine whether sleep patterns differ across academic performance and self-reported depression-status groups. We begin by looking at the overall distributions, before exploring differences between the groups.
